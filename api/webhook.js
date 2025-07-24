@@ -3,7 +3,7 @@ const fs = require('fs');
 const requestp = require('request-promise');
 
 const APP_ID = '1652933'; 
-const PRIVATE_KEY = fs.readFileSync('./cool-bot-app.private-key.pem', 'utf8');
+const PRIVATE_KEY = process.env.GITHUB_PRIVATE_KEY;
 const regex = /\[gifbot:(.*?)\]/i;
 
 const generateJWT = () => jwt.sign(
