@@ -31,7 +31,7 @@ const searchGifs = (term) => requestp({
   url: 'http://api.giphy.com/v1/gifs/search',
   qs: {
     q: term,
-    api_key: 'dc6zaTOxFJmzC'
+    api_key: process.env.GIPHY_API_KEY
   },
   json: true
 });
